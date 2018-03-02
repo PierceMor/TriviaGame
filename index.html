@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="assets/css/pretty.css">
+    </head>
+    <body>
+        <container>
+            <div class="row">
+                <div class="jumbotron">
+                    <h1 class="display-4">
+                        It's Game Time! 
+                    </h1>
+                </div>
+            </div>
+            <div class="row">
+    <!-- Picture goes here --> 
+                <div class="col-6">
+                    <div class="pic">
+                        <div id="pictureZim"></div>
+                    </div>
+                </div>
+
+
+    <!--timer-->
+                <div class="col-6">
+                    <div class="game">
+                        Time Remaining:<span id=timeRemaining></span>
+                    </div>
+                </div>
+    <!-- Question -->
+                    <div class="question">
+                        <br><br>
+                        <span id=questionHolder></span>
+                        <br><br>
+                    </div>
+                </div>
+
+    <!-- Buttons! --> 
+                <div class="col-12">
+                        <button type="button" id="button1" class="btn btn-primary">Primary</button>
+                        <button type="button" id="button2" class="btn btn-primary">Primary</button>
+                        <button type="button" id="button3" class="btn btn-primary">Primary</button>
+                        <button type="button" id="button4" class="btn btn-primary">Primary</button>
+                </div>
+    <!-- Scoreboard -->
+                <div class="col-12">
+                    <div class="game">
+                        Wins: <span id="wins"></span>
+                        <br><br>
+                        Losses: <span id="losses"></span>
+                    </div>
+            </div>
+        </container>
+
+    <!-- Good Ole jQuery boy here --> 
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script type="text/javascript" src="assets/javascript/jquery.js"></script>
+    </body>
+</html>
