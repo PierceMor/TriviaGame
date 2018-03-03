@@ -5,57 +5,98 @@ $(document).ready(function(){
         {
             question: "What Color is Invader Zim?",
             picture : "",
-            buttonAnswers: {
-                correctAnswer: "Green",
-                wrongAnswer1: "blue", 
-                wrongAnswer2: "tan",
-                wrongAnswer3: "Wtf is Invader Zim",
-            }
-        },
-
-        {
+            buttonAnswers: [{
+                choice: "Green",
+                correct: true
+            },{
+                choice: "Blue",
+                correct: false
+            },{
+                choice: "Grey",
+                correct: false
+            },{
+                choice: "Wtf is Invader Zim",
+                correct: false
+            }]
+    },
+    {
             question: "What was Invader Zim's Job and main calling in Life?",
-            picture : "",
-            buttonAnswers: {
-                correctAnswer: "Planetary Conquerer",
-                wrongAnswers: "Food Court Slave",
-                wrongAnswer2: "Space Pilot",
-                wrongAnswer3: "Wtf is Invader Zim",
-            }
-        },
+            picture: "",
+            buttonAnswers: [
+                {
+                choice: "Planetery Conquerer",
+                correct: true
+            },{
+                choice: "Food Court Slave",
+                correct: false
+            },{
+                choice: "Evil Emporer",
+                correct: false
+            },{
+                choice: "Wtf is Invader Zim",
+                correct: false
+            },
+        ]},
 
         {
-            question: "Who are Invader Zim's Leaders and why are they called this?",
+            question: "Who are Invader Zim's Leaders?",
             picture : "",
-            buttonAnswers: {
-                correctAnswer: "The Almighty Tallest, they are the tallest",
-                wrongAnswer1: "The magnificient Strongest, they are the Strongest",
-                wrongAnswer2: "The smartest Rulers, they are smart",
-                wrongAnswer3: "Wtf is Invader Zim",
-            }
+            buttonAnswers: [
+                {
+                choice: "The Alighty Tallest",
+                correct: true
+            },{
+                choice: "The Supreme Leader",
+                correct: false
+            },{
+                choice: "Holy God Emporer",
+                correct: false
+            },{
+                choice: "Wtf is Invader Zim",
+                correct: false
+            },
+        ]
         },
 
         {
             question: "What is the name of Invader Zim's sidekick?",
             picture : "",
-            buttonAnswers: {
-                correctAnswer: "G.i.r.",
-                wrongAnswer1: "Sidekick",
-                wrongAnswer2: "Dib",
-                wrongAnswer3: "Wtf is Invader Zim",
-            }
+            buttonAnswers: [
+                {
+                choice: "G.I.R",
+                correct: true
+            },{
+                choice: "Dib",
+                correct: false
+            },{
+                choice: "Minion",
+                correct: false
+            },{
+                choice: "Wtf is Invader Zim",
+                correct: false
+            },
+        ]
         },
 
         {
             question: "What species is Invader Zim?",
             picture : "",
-            buttonAnswers: {
-                correctAnswer: "Irken",
-                wrongAnswer1: "Human",
-                wrongAnswer2: "Vulcan",
-                wrongAnswer3: "Wtf is Invader Zim",
-            }
-        },
+            buttonAnswers: [
+                    {
+                    choice: "Irken",
+                    correct: true
+                },{
+                    choice: "Vulcan",
+                    correct: false
+                },{
+                    choice: "Martian",
+                    correct: false
+                },{
+                    choice: "Wtf is Invader Zim",
+                    correct: false
+                },
+            ]
+        }
     ];
 //End Trivia Questions
 
@@ -71,7 +112,7 @@ $(document).ready(function(){
 
 
     var timeVariable;         // placeholder for the timer 
-    var clockTime = 20;       // start of time
+    var clockTime = 30;       // start of time
 
     // so beautiful timer 
     function runTimer() {
@@ -90,16 +131,36 @@ $(document).ready(function(){
 
 
         //resets the timer
-        clockTime = 20;
+        clockTime = 30;
 
-        triviaOption = triviaContent[Math.floor(Math.random() * triviaContent.length)];
+        // randomizes the question   
+        // not working 
+        triviaContent = (Math.floor(Math.random() * triviaContent.length));
+        $('#questionHolder').text(triviaContent.question);
+        //rnadomizes the answer
+       // i = (triviaContent.buttonAnswers.choice)[Math.floor(Math.random() * (triviaContent.buttonAnswers.choice).length)];
+        //for loopage ayyy yea
+     //   for (i = 0; i <  (triviaContent.buttonAnswers.choice).length; i++){
 
-        $('#losses').text(gameScore.losses);
-        $('#wins').text(gameScore.wins);
-        $('#questionHolder').text(triviaOption);
-        console.log(newGame);
+        //puts the answer choices inside the buttons
+      //  $('#button1').text((triviaContent.buttonAnswers.choice[1]));
+    //    $('#button2').text((triviaContent.buttonAnswers.choice[2]));
+     //   $('#button3').text((triviaContent.buttonAnswers.choice[3]));
+    //    $('#button4').text((triviaContent.buttonAnswers.choice[4]));
     };
 
 
-newGame();
+        $('#losses').text(gameScore.losses);
+        $('#wins').text(gameScore.wins);
+        $('#questionHolder').text(triviaContent.question);
+       // $('')
+        console.log(triviaContent);
+        newGame();
+    runTimer();
+
+
 });
+//newGame();
+//runTimer();
+// gets the game going
+

@@ -15,6 +15,13 @@
                 </div>
             </div>
             <div class="row">
+    <!-- Scoreboard -->
+            <div class="col-12">
+                    <div class="game">
+                        Wins: <span id="wins"></span>
+                        Losses: <span id="losses"></span>
+                    </div>
+                </div>
     <!-- Picture goes here --> 
                 <div class="col-6">
                     <div class="pic">
@@ -26,36 +33,33 @@
     <!--timer-->
                 <div class="col-6">
                     <div class="game">
-                        Time Remaining:<span id=timeRemaining></span>
-                    </div>
-                </div>
+                        Time Remaining:<h3 id=timeRemaining>30</h3>
+                    
+                
     <!-- Question -->
-                    <div class="question">
-                        <br><br>
-                        <span id=questionHolder></span>
-                        <br><br>
+                
+                        <div class="game">
+                            <span id=questionHolder></span>
+                        </div>
                     </div>
+                
                 </div>
 
     <!-- Buttons! --> 
                 <div class="col-12">
-                        <button type="button" id="button1" class="btn btn-primary">Primary</button>
-                        <button type="button" id="button2" class="btn btn-primary">Primary</button>
-                        <button type="button" id="button3" class="btn btn-primary">Primary</button>
-                        <button type="button" id="button4" class="btn btn-primary">Primary</button>
+                        <button type="button" id="button1" class="btn btn-primary"></button>
+                        <button type="button" id="button2" class="btn btn-primary"></button>
+                        <button type="button" id="button3" class="btn btn-primary"></button>
+                        <button type="button" id="button4" class="btn btn-primary"></button>
                 </div>
-    <!-- Scoreboard -->
                 <div class="col-12">
-                    <div class="game">
-                        Wins: <span id="wins"></span>
-                        <br><br>
-                        Losses: <span id="losses"></span>
-                    </div>
-            </div>
+                        <button type="button" id="skipQuestion" class="btn btn-primary btn-lg">Next Question</button>
+                        <button type="button" id="startOver" class="btn btn-primary btn-lg">Start Over</button>
+                </div>
         </container>
 
     <!-- Good Ole jQuery boy here --> 
         <script src="https://code.jquery.com/jquery.js"></script>
-        <script type="text/javascript" src="assets/javascript/jquery.js"></script>
+        <script type="text/javascript" src="assets/javascript/jquery1.js"></script>
     </body>
 </html>
