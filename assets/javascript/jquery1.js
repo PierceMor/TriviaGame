@@ -4,7 +4,7 @@ $(document).ready(function(){
         var triviaContent = [
             {
                 question: "What Color is Invader Zim?",
-                picture : "",
+                picture : "assets/images/",
                 buttonAnswers: [{
                     choice: "Green",
                     correct: true
@@ -22,7 +22,7 @@ $(document).ready(function(){
     
             {
                 question: "What was Invader Zim's Job and main calling in Life?",
-                picture : "",
+                picture : "assets/images/invader-zim-returns.jpg",
                 buttonAnswers: [
                     {
                     choice: "Planetery Conquerer",
@@ -42,7 +42,7 @@ $(document).ready(function(){
     
             {
                 question: "Who are Invader Zim's Leaders and why are they called this?",
-                picture : "",
+                picture : "assets/images/",
                 buttonAnswers: [
                     {
                     choice: "The Alighty Tallest",
@@ -62,7 +62,7 @@ $(document).ready(function(){
     
             {
                 question: "What is the name of Invader Zim's sidekick?",
-                picture : "",
+                picture : "assets/images/",
                 buttonAnswers: [
                     {
                     choice: "G.I.R",
@@ -82,7 +82,7 @@ $(document).ready(function(){
     
             {
                 question: "What species is Invader Zim?",
-                picture : "",
+                picture : "assets/images/",
                 buttonAnswers: [
                     {
                     choice: "Irken",
@@ -100,13 +100,15 @@ $(document).ready(function(){
             ]
             },
         ];
+
+
     //End Trivia Questions
     
         var triviaOption;           // placeholder for the entire qeustion
         var triviaQuestion;         // placeholder for the question of the 
         var questionSelection;      // placeholder for the answer choices, this will go with all the buttons
         var playerChoice;           // this is where the player will pick the question
-        var pictureHoler;           // this is going to be the picture that accompanies the question
+        var pictureHolder;           // this is going to be the picture that accompanies the question
         var gameScore = {           // holds the win loss
             wins: 0,
             losses: 0
@@ -144,24 +146,48 @@ $(document).ready(function(){
             $('#wins').text(gameScore.wins);
             $('#questionHolder').text(triviaOption.question);
         //    console.log(triviaAnswer.buttonAnswers);
+        };
 
+     //   let i = Math.floor(Math.random() * 4);
 
         //randomiize this here button choices 
+        function buttonBaby(button){
+            playerChoice = button;
+
+            if (triviaOption.buttonAnswers[i].correct === true ) {
+                wins ++;
+                newGame();
+                winDisplay();
+            } else if ( triviaOption.buttonAnswers[i].correct === false ) {
+                losses ++;
+                newGame();
+                lossDisplay();
+            }
+        }
+
+        $('#button1').click(function(){
+            buttonBaby(questionAnswer);
+        });
+
+        $('#button2').click(function(){
+            buttonBaby(questionAnswer);
+        });
+        
+        $('#button3').click(function(){
+            buttonBaby(questionAnswer);
+        });
+        
+        $('#button4').click(function(){
+            buttonBaby(questionAnswer);
+        });
+
         questionAnswer = triviaOption.buttonAnswers[i].choice;
-            $('#button1').text(triviaOption.buttonAnswers[1].choice);
-            $('#button2').text(triviaOption.buttonAnswers[2].choice);
-            $('#button3').text(triviaOption.buttonAnswers[3].choice);
-            $('#button4').text(triviaOption.buttonAnswers[0].choice);
+        //    $('#button1').text(triviaOption.buttonAnswers[1].choice);
+         //   $('#button2').text(triviaOption.buttonAnswers[2].choice);
+         //   $('#button4').text(triviaOption.buttonAnswers[0].choice);
 
-
-        //    function buttonStuffbaby(){
-
-          //      questionOption
-
-          //  }
-        };
+       
     
-        //lets put some answers in the buttons 
 
         
 
