@@ -138,16 +138,32 @@ $(document).ready(function(){
             let i = Math.floor(Math.random() * 4);
 
             triviaOption = triviaContent[Math.floor(Math.random() * triviaContent.length)];
-            questionOption = triviaOption.question.choice;
+           
 
             $('#losses').text(gameScore.losses);
             $('#wins').text(gameScore.wins);
             $('#questionHolder').text(triviaOption.question);
-            console.log(i);
+        //    console.log(triviaAnswer.buttonAnswers);
 
-            $('#button1').text(questionOption);
+
+        //randomiize this here button choices 
+        questionAnswer = triviaOption.buttonAnswers[i].choice;
+            $('#button1').text(triviaOption.buttonAnswers[1].choice);
+            $('#button2').text(triviaOption.buttonAnswers[2].choice);
+            $('#button3').text(triviaOption.buttonAnswers[3].choice);
+            $('#button4').text(triviaOption.buttonAnswers[0].choice);
+
+
+        //    function buttonStuffbaby(){
+
+          //      questionOption
+
+          //  }
         };
     
-    
+        //lets put some answers in the buttons 
+
+        
+
     newGame();
     });
